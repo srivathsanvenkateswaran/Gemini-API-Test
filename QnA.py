@@ -23,7 +23,7 @@ if 'chat_history' not in st.session_state:
 input = st.text_input("Enter a prompt here")
 submit = st.button("Submit")
 
-if input and (submit or st.event.):
+if input and submit:
     st.session_state['chat_history'].append(('You', input))
     response = get_gemini_response(input)
     # st.subheader("Response:")
